@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/boardingFragment">
+
+    <fragment
+        android:id="@+id/boardingFragment"
+        android:name="com.example.kt5_lovecalculator.board.onBoardingFragment"
+        android:label="fragment_boarding"
+        tools:layout="@layout/fragment_boarding" />
+    <fragment
+        android:id="@+id/loveFragment"
+        android:name="com.example.kt5_lovecalculator.love.LoveFragment"
+        android:label="fragment_love"
+        tools:layout="@layout/fragment_love" />
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.example.kt5_lovecalculator.SecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" />
+
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.kt5_lovecalculator.history.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history">
+    <action
+        android:id="@+id/action_historyFragment_to_loveFragment"
+        app:destination="@id/loveFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/boardFragment2"
+        android:name="com.example.kt5_lovecalculator.board.onBoardingFragment"
+        android:label="fragment_board"
+        tools:layout="@layout/fragment_boarding" >
+        <action
+            android:id="@+id/action_boardFragment2_to_loveFragment"
+            app:destination="@id/loveFragment" />
+    </fragment>
+
+</navigation>
